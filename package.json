@@ -10,5 +10,12 @@
     "sales"
   ],
   "author": "Brandon Kominek",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "start": "nodemon server.js"
 }
