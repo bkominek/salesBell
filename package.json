@@ -1,0 +1,14 @@
+{
+  "name": "salesbell",
+  "version": "1.0.0",
+  "description": "smack that sales bell",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sales"
+  ],
+  "author": "Brandon Kominek",
+  "license": "ISC"
+}
