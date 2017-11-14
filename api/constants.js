@@ -1,4 +1,5 @@
 module.exports = {
+  BRANDON: 'meow.wav',
   CARMINE: 'italian.m4a',
   COLIN: 'smrt.m4a',
   MAV: 'danger_zone.m4a',
