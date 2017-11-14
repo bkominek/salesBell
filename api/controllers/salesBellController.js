@@ -4,11 +4,11 @@ var path = require('path');
 const files = require('../constants');
 
 exports.play_sound = function(req, res) {
-  console.log(req);
-  console.log("-----------");
-  console.log(req.body.user_name.toUpperCase());
+  const userName = req.body.user_name;
+  const fileName = userName ? files[userName.toUpperCase()] || files.DEFAULT : files.DEFAULT;
+
   var appDir = path.dirname(require.main.filename);
-  player.play(appDir + '/assets/' + files.COLIN, function(err){
+  player.play(appDir + '/assets/' + fileName, function(err){
     if (err) throw err
   })
 
