@@ -1,5 +1,5 @@
 'use strict';
-var player = require('play-sound')()
+var player = require('play-sound')({player: omxplayer})
 var path = require('path');
 const files = require('../constants');
 
