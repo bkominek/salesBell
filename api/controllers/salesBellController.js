@@ -8,7 +8,7 @@ exports.play_sound = function(req, res) {
   const fileName = userName ? files[userName.toUpperCase()] || files.DEFAULT : files.DEFAULT;
 
   var appDir = path.dirname(require.main.filename);
-  player.play(appDir + '/assets/' + fileName, function(err){
+  player.play(appDir + '/assets/' + fileName, {omxplayer: ['-o', 'local']} function(err){
     if (err) throw err
   })
 
