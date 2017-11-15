@@ -5,16 +5,14 @@ const files = require('../constants');
 
 exports.play_sound = function(req, res) {
   let fileName;
+  const MAX_VOLUME = 2500;
   const amount = req.body.text ? parseInt(req.body.text) : 1000;
-  const percent = (amount / 2000) - 1;
-  const volume = 3000 * percent;
-
-  console.log(amount);
-  console.log(percent);
-  console.log(volume);
+  const percent = (amount / 2000) - 1; // close to $2000, higher volume
+  let volume = MAX_VOLUME * percent;
 
   if (req.body.text && parseInt(req.body.text) >= 2000) {
     fileName = files.GONG;
+    volume = MAX_VOLUME * -1;
   } else {
     const userName = req.body.user_name;
     fileName = userName ? files[userName.toUpperCase()] || files.DEFAULT : files.DEFAULT;
