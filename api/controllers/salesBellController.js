@@ -4,8 +4,10 @@ var path = require('path');
 const files = require('../constants');
 
 exports.play_sound = function(req, res) {
-  console.log(req);
   let fileName;
+  console.log(req.body.text);
+  console.log(parseInt(req.body.text));
+  console.log(parseInt(req.body.text) >= 2000);
 
   if (req.body.text && parseInt(req.body.text) >= 2000) {
     fileName = files.GONG;
