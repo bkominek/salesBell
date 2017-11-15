@@ -6,7 +6,7 @@ const files = require('../constants');
 exports.play_sound = function(req, res) {
   let fileName;
   const amount = req.body.text ? parseInt(req.body.text) : 1000;
-  const percent = 1 - amount / 2000;
+  const percent = (amount / 2000) - 1;
   const volume = 3000 * percent;
 
   console.log(amount);
