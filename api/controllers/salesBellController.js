@@ -7,7 +7,7 @@ exports.play_sound = function(req, res) {
   console.log(req);
   let filename;
 
-  if (red.body.text && parseInt(req.body.text >= 2000)) {
+  if (req.body.text && parseInt(req.body.text >= 2000)) {
     filename = files.GONG;
   } else {
     const userName = req.body.user_name;
