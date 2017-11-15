@@ -1,5 +1,5 @@
 'use strict';
-var player = require('play-sound')({player: omxplayer})
+var player = require('play-sound')({player: 'omxplayer'})
 var path = require('path');
 const files = require('../constants');
 
@@ -8,7 +8,7 @@ exports.play_sound = function(req, res) {
   const fileName = userName ? files[userName.toUpperCase()] || files.DEFAULT : files.DEFAULT;
 
   var appDir = path.dirname(require.main.filename);
-  player.play(appDir + '/assets/' + fileName, {omxplayer: ['-o', 'local']} function(err){
+  player.play(appDir + '/assets/' + fileName, {omxplayer: ['-o', 'local']}, function(err){
     if (err) throw err
   })
 
