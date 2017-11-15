@@ -4,6 +4,7 @@ var path = require('path');
 const files = require('../constants');
 
 exports.play_sound = function(req, res) {
+  console.log(req);
   const userName = req.body.user_name;
   const fileName = userName ? files[userName.toUpperCase()] || files.DEFAULT : files.DEFAULT;
 
