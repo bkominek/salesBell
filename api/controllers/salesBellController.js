@@ -5,9 +5,9 @@ const files = require('../constants');
 
 exports.play_sound = function(req, res) {
   let fileName;
-  console.log(req.body.text);
-  console.log(parseInt(req.body.text));
-  console.log(parseInt(req.body.text) >= 2000);
+  const amount = req.body.text ? parseInt(req.body.text) : 1000;
+  const percent = 1 - amount / 2000;
+  const volume = 3000 * percent;
 
   if (req.body.text && parseInt(req.body.text) >= 2000) {
     fileName = files.GONG;
@@ -17,7 +17,7 @@ exports.play_sound = function(req, res) {
   }
 
   var appDir = path.dirname(require.main.filename);
-  player.play(appDir + '/assets/' + fileName, {omxplayer: ['-o', 'local']}, function(err){
+  player.play(appDir + '/assets/' + fileName, {omxplayer: ['-o', 'local', '--vol', volume]}, function(err){
     if (err) throw err
   })
 
