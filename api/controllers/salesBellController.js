@@ -5,10 +5,10 @@ const files = require('../constants');
 
 exports.play_sound = function(req, res) {
   console.log(req);
-  let filename;
+  let fileName;
 
   if (req.body.text && parseInt(req.body.text >= 2000)) {
-    filename = files.GONG;
+    fileName = files.GONG;
   } else {
     const userName = req.body.user_name;
     fileName = userName ? files[userName.toUpperCase()] || files.DEFAULT : files.DEFAULT;
