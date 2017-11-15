@@ -5,7 +5,7 @@ const files = require('../constants');
 
 exports.play_sound = function(req, res) {
   let fileName;
-  const MAX_VOLUME = 2500;
+  const MAX_VOLUME = 3000;
   const amount = req.body.text ? parseInt(req.body.text) : 1000;
   const percent = (amount / 2000) - 1; // close to $2000, higher volume
   let volume = MAX_VOLUME * percent;
