@@ -6,5 +6,6 @@ module.exports = {
   PAULNOWOSIELSKI: 'ignorant.m4a',
   SEAN_ERJAVEC: 'squat.m4a',
   TARACYBULSKI: 'coffees_for_closers.m4a',
+  GONG: 'gong.wav',
   DEFAULT: 'ding.mp3'
 }
