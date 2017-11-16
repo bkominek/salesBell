@@ -25,5 +25,5 @@ while search:
       time.sleep(music_list[name]['duration'])
 
   now = datetime.datetime.now()
-  if now.hour > 10 and now.minute > 30
+  if now.hour > 10 and now.minute > 30:
     search = False
