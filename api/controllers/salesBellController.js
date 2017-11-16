@@ -23,5 +23,8 @@ exports.play_sound = function(req, res) {
     if (err) throw err
   })
 
-  res.json({ text: "Ding Ding Ding!" });
+  res.json({
+    response_type: "in_channel",
+    text: "Ding Ding Ding!"
+  });
 };
