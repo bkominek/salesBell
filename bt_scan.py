@@ -4,7 +4,7 @@ import time
 import datetime
 
 pygame.init()
-music_list = {'Nexus 6P': {'file': 'assets/woo.mp3', 'duration': 3}}
+music_list = {'Nexus 6P': {'file': '/home/pi/salesBell/assets/woo.mp3', 'duration': 3}}
 
 print "scanning for bluetooth devices..."
 
