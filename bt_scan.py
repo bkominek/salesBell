@@ -1,22 +1,20 @@
-from bluetooth import *
-import pyglet
+import pygame
+import time
 
-print "performing inquiry..."
+pygame.init()
+music_list = {'Nexus 6P': {'file': 'assets/woo.mp3', 'duration': 3}}
+
+print "scanning for bluetooth devices..."
 
 target_devices = ["Nexus 6P"]
 found_devices = []
-nearby_devices = discover_devices(lookup_names = True)
 
-print "found %d devices" % len(nearby_devices)
+while True:
+  nearby_devices = discover_devices(lookup_names = True)
 
-for addr, name in nearby_devices:
-  if name in target_devices and name not in found_devices:
-    found_devices.append(name)
-  print " %s - %s" % (addr, name)
-
-print found_devices
-
-music = pyglet.resource.media('assets/woo.mp3')
-music.play()
-
-pyglet.app.run()
+  for addr, name in nearby_devices:
+    if name in target_devices and name not in found_devices:
+      found_devices.append(name)
+      pygame.mixer.music.load(music_list[name]['file'])
+      pygame.mixer.music.play()
+      time.sleep(music_list[name]['duration'])
