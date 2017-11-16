@@ -23,5 +23,5 @@ exports.play_sound = function(req, res) {
     if (err) throw err
   })
 
-  res.json("Ding Ding Ding!");
+  res.json({ text: "Ding Ding Ding!" });
 };
