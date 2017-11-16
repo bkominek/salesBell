@@ -1,4 +1,5 @@
 from bluetooth import *
+import pyglet
 
 print "performing inquiry..."
 
