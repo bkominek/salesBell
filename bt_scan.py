@@ -17,8 +17,7 @@ while search:
 
   for addr, name in nearby_devices:
     if name in target_devices and name not in found_devices:
-      print "found"
-      print name
+      print "playing sound for %s" % (name)
       found_devices.append(name)
       pygame.mixer.music.load(music_list[name]['file'])
       pygame.mixer.music.play()
