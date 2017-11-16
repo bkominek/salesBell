@@ -5,7 +5,7 @@ import time
 import datetime
 
 pygame.init()
-music_list = {'nexus 6p': {'file': '/home/pi/salesBell/assets/eye_of_the_tiger.mp3', 'duration': 246}, 'oneplusbloosh': {'file': '/home/pi/salesBell/assets/left_4_dead-tank_theme.mp3', 'duration': 59}, 'andrew lockwood (galaxy note4)': {'file': '/home/pi/salesBell/assets/trololol.mp3', 'duration': 17}, "sean's iphone": {'file': '/home/pi/salesBell/assets/indiana_jones.mp3', 'duration': 146}, "clinton's iphone": {'file': '/home/pi/salesBell/assets/john_denver-country_roads.m4a', 'duration': 181}, "erin's pixel": {'file': '/home/pi/salesBell/assets/backstreet_boys-everybody.mp3', 'duration': 290}, 'zephyr': {'file': '/home/pi/salesBell/assets/duel_of_the_fates.m4a', 'duration': 17}}
+music_list = {'nexus 6p': {'file': '/home/pi/salesBell/assets/john_denver-country_roads.m4a', 'duration': 181}, 'oneplusbloosh': {'file': '/home/pi/salesBell/assets/left_4_dead-tank_theme.mp3', 'duration': 59}, 'andrew lockwood (galaxy note4)': {'file': '/home/pi/salesBell/assets/trololol.mp3', 'duration': 17}, "sean's iphone": {'file': '/home/pi/salesBell/assets/indiana_jones.mp3', 'duration': 146}, "clinton's iphone": {'file': '/home/pi/salesBell/assets/john_denver-country_roads.m4a', 'duration': 181}, "erin's pixel": {'file': '/home/pi/salesBell/assets/backstreet_boys-everybody.mp3', 'duration': 290}, 'zephyr': {'file': '/home/pi/salesBell/assets/duel_of_the_fates.m4a', 'duration': 17}}
 
 print "scanning for bluetooth devices..."
 
