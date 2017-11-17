@@ -14,10 +14,10 @@ found_devices = []
 search = True
 
 while search:
-    # try:
-    #     nearby_devices = discover_devices(lookup_names = True)
-    # except:
-    nearby_devices = []
+    try:
+        nearby_devices = discover_devices(lookup_names = True)
+    except:
+        nearby_devices = []
 
     for addr, name in nearby_devices:
         lower_name = name.lower()
@@ -34,6 +34,7 @@ while search:
             time.sleep(music_list[lower_name]['duration'])
             print "sound finished"
 
+    # stop after 10:30
     now = datetime.datetime.now()
-    if now.hour > 10 and now.minute > 30:
+    if now.hour > 9 and now.minute > 30 or now.hour > 10:
         search = False
