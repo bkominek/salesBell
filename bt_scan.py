@@ -28,6 +28,7 @@ while search:
             pygame.mixer.music.load(music_list[lower_name]['file'])
             pygame.mixer.music.play()
             time.sleep(music_list[lower_name]['duration'])
+            print "sound finished"
 
     now = datetime.datetime.now()
     if now.hour > 10 and now.minute > 30:
