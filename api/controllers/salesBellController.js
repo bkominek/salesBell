@@ -10,6 +10,8 @@ exports.play_sound = function(req, res) {
   const percent = (amount / 2000) - 1; // close to $2000, higher volume
   let volume = MIN_VOLUME * percent;
 
+  console.log(req);
+
   if (req.body.text && parseInt(req.body.text) >= 2000) {
     fileName = files.GONG;
     volume = 0;
