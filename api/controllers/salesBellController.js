@@ -11,6 +11,7 @@ exports.play_sound = function(req, res) {
   let volume = MIN_VOLUME * percent;
 
   console.log(req);
+  console.log("---------------");
 
   if (req.body.text && parseInt(req.body.text) >= 2000) {
     fileName = files.GONG;
