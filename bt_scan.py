@@ -9,7 +9,7 @@ music_list = {'nexus 6p': {'file': '/home/pi/salesBell/assets/eye_of_the_tiger.m
 
 print "scanning for bluetooth devices..."
 
-target_devices = ["nexus 6p", "oneplusbloosh", "andrew lockwood (galaxy note4)", "sean’s iphone", "clinton’s iphone", "erin’s pixel", "zephyr"]
+target_devices = ["nexus 6p", "oneplusbloosh", "andrew lockwood galaxy note4", "seans iphone", "clintons iphone", "erins pixel", "zephyr"]
 found_devices = []
 search = True
 
