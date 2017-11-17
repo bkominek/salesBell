@@ -23,7 +23,7 @@ while search:
             lower_name = lower_name.replace(char,"")
 
         if lower_name in target_devices and lower_name not in found_devices:
-            print "playing sound for %s" % (name)
+            print "playing sound for %s" % (lower_name)
             found_devices.append(lower_name)
             pygame.mixer.music.load(music_list[lower_name]['file'])
             pygame.mixer.music.play()
