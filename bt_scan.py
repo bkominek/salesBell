@@ -22,6 +22,8 @@ while search:
         for char in replacers:
             lower_name = lower_name.replace(char,"")
 
+        print lower_name
+
         if lower_name in target_devices and lower_name not in found_devices:
             print "playing sound for %s" % (lower_name)
             found_devices.append(lower_name)
