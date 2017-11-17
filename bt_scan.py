@@ -14,7 +14,10 @@ found_devices = []
 search = True
 
 while search:
-    nearby_devices = discover_devices(lookup_names = True)
+    try:
+        nearby_devices = discover_devices(lookup_names = True)
+    except:
+        nearby_devices = []
 
     for addr, name in nearby_devices:
         lower_name = name.lower()
