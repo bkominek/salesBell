@@ -18,7 +18,7 @@ while search:
 
     for addr, name in nearby_devices:
         lower_name = name.lower()
-        replacers = "'()"
+        replacers = "'()’"
         for char in replacers:
             lower_name = lower_name.replace(char,"")
 
